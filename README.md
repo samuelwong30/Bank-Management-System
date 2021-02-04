@@ -27,13 +27,9 @@ A banking system that uses the sqlite3 database system with a graphical user int
 - the database file the is used to store all the user information
 ## User Interface
 <img src="Images/Account_menu.png"/>
-
 <img src="Images/Log_in.png"/>
-
 <img src="Images/Create_account.png"/>
-
 <img src="Images/Account_menu.png"/>
-
+<img src="Images/Account_menu.png"/>
 <img src="Images/Deposits_withdraws.png"/>
-
 <img src="Images/Delete_account.png"/>
