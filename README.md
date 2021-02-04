@@ -25,3 +25,5 @@ A banking system that uses the sqlite3 database system with a graphical user int
 - Integrated the objects created along with the sqlite3 database to store the information.
 ### account.db
 - the database file the is used to store all the user information
+## User Interface
+<img src="images/Account_menu.png"/>
