@@ -23,5 +23,5 @@ A banking system that uses the sqlite3 database system with a graphical user int
 - Program uses object oriented programming with an Account class.
 - Account is used to create objects to keep information about the current user along with defining what actions the users can do.
 - Integrated the objects created along with the sqlite3 database to store the information.
-### useraccounts.db
+### account.db
 - the database file the is used to store all the user information
