@@ -11,7 +11,6 @@ def create_account(account):
 	# Insert into table
 	c.execute("INSERT INTO account VALUES (:first_name, :last_name, :account_num, :password, :account_type, :balance, :transactions)",{'first_name': my_info[0], 'last_name': my_info[1], 'account_num': my_info[2], 'password': my_info[3], 'account_type': my_info[4], 'balance': my_info[5], 'transactions': "No Transactions"})
 
-
 # Get account information
 def get_account(account_number, my_password):
 	c.execute("SELECT * FROM account WHERE account_num = ? AND password = ?", (account_number, my_password))
@@ -32,7 +31,6 @@ def dblog_in(account_num, password):
 	else:
 		return status
 
-
 # Delete account
 def delete_account(account_number, my_password):
 	# Check if account exists first 
@@ -42,7 +40,6 @@ def delete_account(account_number, my_password):
 		return 0
 	# Remove from database
 	c.execute("DELETE from account WHERE account_num = :account_num", {'account_num': account_number})
-
 
 # Deposit money into balance add update transactions
 def db_deposit(account, amount):
@@ -88,7 +85,6 @@ def create_accountnumber():
 			return num
 		num = ''
 
-
 conn = sqlite3.connect('account.db')
 
 c = conn.cursor()
@@ -103,17 +99,14 @@ c = conn.cursor()
 #			transactions text
 #			)""")
 
-
-
 def run_gui():
 	root = Tk()
 	root.title("Main Menu")
-	root.geometry('450x175')
+	root.geometry('475x175')
 
 	global account_1
 
 	account_1 = Account("", "", 0, 0, "")
-
 
 	# THE 3 FRAMES 
 	# Frame 1
@@ -210,7 +203,6 @@ def run_gui():
 		frame7.grid_forget()
 		root.title("Main Menu")
 		frame1.grid()
-
 
 	# Get input from entry in frame 1
 	def create():
@@ -313,7 +305,6 @@ def run_gui():
 		l66_5 = Label(frame5, text = status[6])
 		l66_5.grid(row=6, column=3)
 
-
 		b2_5 = Button(frame5, text = "Back to Account Menu", command=display_5go4).grid(row=7, column=2)
 
 	# Deposit or withdraw amount into db	
@@ -370,7 +361,6 @@ def run_gui():
 	b1_go_2 = Button(frame1, text = "Log-in", command = display_1go2).grid(row=2, column=2)
 	b1_go_3 = Button(frame1, text = "Create Account", command = display_1go3).grid(row=3, column=2)
 
-
 	# Frame 2: Log- in
 	frame2 = Frame(root)
 	Label(frame2, text = 'Account number').grid(row=1, column=2)
@@ -394,7 +384,7 @@ def run_gui():
 	Label(frame3, text = 'Account Type').grid(row=4, column=2)
 	Label(frame3, text = "Enter 4 digit password", fg = "light gray").grid(row=3, column =4)
 	
-	# get info to create account
+	# Get entry info to create account
 	e1_3 = Entry(frame3)
 	e1_3.grid(row=1, column = 3)
 
@@ -411,8 +401,8 @@ def run_gui():
 	my_ops = OptionMenu(frame3, select, *options)
 	my_ops.grid(row=4, column = 3)
 
-	b1_1 = Button(frame3, text ='Submit', command=create).grid(row=7, column=2)	
-	b3_go_1 = Button(frame3, text = 'Main Menu', command=display_3go1).grid(row=7, column=4)
+	b1_1 = Button(frame3, text ='Submit', command=create).grid(row=7, column=4)	
+	b3_go_1 = Button(frame3, text = 'Back to Main Menu', command=display_3go1).grid(row=7, column=2)
 
 	# Frame 4: Account Menu
 	frame4 = Frame(root)
@@ -463,12 +453,10 @@ def run_gui():
 	b1_7 = Button(frame7, text="Delete Account", command=del_account).grid(row=3, column=2)
 	b2_7 = Button(frame7, text="Back to Account Menu", command=display_7go4).grid(row=3, column=1)
 
-
 	frame1.grid()
 	root.mainloop()
 
 run_gui()
-
 
 conn.commit()
 conn.close()
