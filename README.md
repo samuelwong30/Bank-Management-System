@@ -9,22 +9,7 @@ A banking system that uses the sqlite3 database system with a graphical user int
 
 - A GUI should appear on the screen for use.
 - When finished using the program, make sure you are logged out and on the "Main Menu" screen before quitting.
-## About the Code
-### Bank.py
-- Bank.py is broken up into two parts:
-#### Part 1: sqlite3 database
-- Uses the sqlite3 module in Python3 which allows all the data about the individuals to be stored in a database.
-- The database stores 7 items: first name, last name, account number, password, balance, latest transaction.
-- Functions that allows for user input from the GUI to be inserted, updated, or deleted into the database.
-#### Part 2: graphical user interface
-- There are 7 frames in total, each frame consists of individual labels and buttons.
-- The functions in this section perform tasks such as transitioning between frames, getting user input, taking the user input and calling the functions from the sqlite3 code above.
-### Account.py
-- Program uses object oriented programming with an Account class.
-- Account is used to create objects to keep information about the current user along with defining what actions the users can do.
-- Integrated the objects created along with the sqlite3 database to store the information.
-### account.db
-- the database file the is used to store all the user information
+
 ## User Interface
 <img src="Images/Main_menu.png"/>
 <img src="Images/Log_in.png"/>
