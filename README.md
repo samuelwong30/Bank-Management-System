@@ -3,7 +3,7 @@ A banking system that uses the sqlite3 database system with a graphical user int
 ## Instructions
 - Requirements: Python 3.9.1 or higher installed
 - Clone the "Bank-Management-System" directory onto your system. 
-- In the terminal, inside the directory run the command. 
+- In the terminal, inside the directory run the command: 
 
           python3 Bank.py
 
