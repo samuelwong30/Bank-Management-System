@@ -12,15 +12,15 @@ A banking system that uses the sqlite3 database system with a graphical user int
 
 ## User Interface
 <img src="Images/Main_menu.png"/>
-<br>
+
 <img src="Images/Log_in.png"/>
-<br>
+
 <img src="Images/Create_account.png"/>
-<br>
+
 <img src="Images/Account_menu.png"/>
-<br>
+
 <img src="Images/Account_information.png"/>
-<br>
+
 <img src="Images/Deposits_withdraws.png"/>
-<br>
+
 <img src="Images/Delete_account.png"/>
