@@ -125,6 +125,8 @@ def run_gui():
 	# 2 -> 1
 	def display_2go1():
 		frame2.grid_forget()
+		e1_2.delete(0, END)
+		e2_2.delete(0, END)
 		root.title("Main Menu")
 		frame1.grid()
 	def display_2go4():
@@ -136,6 +138,10 @@ def run_gui():
 	# 3 -> 1
 	def display_3go1():
 		frame3.grid_forget()
+		e1_3.delete(0, END)
+		e2_3.delete(0, END)
+		e3_3.delete(0, END)
+		select.set(options[0])
 		root.title("Main Menu")
 		frame1.grid()
 	def display_3go4():
@@ -207,7 +213,7 @@ def run_gui():
 	# Get input from entry in frame 1
 	def create():
 		if (e1_3.get() == "" or e2_3.get() == "" or e3_3.get() == ""):
-			messagebox.showerror("Error", "One or more field left empty")
+			messagebox.showerror("Error", "One or more fields left empty")
 			return
 		if len(e3_3.get()) != 4 or e3_3.get().isdecimal() != True:
 			messagebox.showerror("Error", "Password must be be of length 4 consisting of digits 0-9")
